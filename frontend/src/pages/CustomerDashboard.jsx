@@ -57,7 +57,10 @@ function CustomerDashboard() {
     navigate('/login')
   }
 
-  const formatPrice = (price) => price.toLocaleString('vi-VN')
+  const formatPrice = (price) => {
+    if (price == null) return '0'
+    return price.toLocaleString('vi-VN')
+  }
   const formatDate = (dateStr) => new Date(dateStr).toLocaleString()
 
   return (
