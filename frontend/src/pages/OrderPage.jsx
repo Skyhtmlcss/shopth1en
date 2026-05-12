@@ -54,10 +54,9 @@ function OrderPage() {
     })
   }
 
-  const totalPrice = selectedServices.reduce((sum, s) => sum + (s.price || 0), 0)
+  const totalPrice = selectedServices.reduce((sum, s) => sum + s.price, 0)
 
   const formatPrice = (price) => {
-    if (price == null) return '0'
     return price.toLocaleString('vi-VN')
   }
 
@@ -207,7 +206,7 @@ function OrderPage() {
               <div className="mb-6">
                 <h2 className="text-lg font-semibold text-gray-700 mb-4">Bước 1: Chọn gói</h2>
                 <div className="space-y-2 max-h-80 overflow-y-auto pr-1">
-                  {Array.isArray(services) && services.map(service => (
+                  {services.map(service => (
                     <label
                       key={service.id}
                       className={`flex items-center p-3 rounded-lg border cursor-pointer transition-colors ${
