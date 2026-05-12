@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 const services = [
-[
   { id: 1, name: 'Cày Thuê 1250 Hearts', price: 36000 },
   { id: 2, name: 'Thức Tỉnh Control V2 (Yêu Cầu 500 Mastery Và Trái Control)', price: 36000 },
   { id: 3, name: 'Thức Tỉnh Control V2 Cày 500 Mastery Cho Khách (Yêu Cầu Có Trái Control)', price: 64000 },
@@ -87,7 +86,6 @@ const services = [
   { id: 82, name: '(Đang Thuê Không Vào Acc) Lấy 30 Vẩy Leviathan', price: 119200 },
   { id: 83, name: 'Update 21: Lấy Kiếm Fox Lamp', price: 55200 },
   { id: 84, name: 'Update 21: Cày Kitsune Ribbon', price: 55200 }
-]
 ];
 
 router.get('/', (req, res) => {
